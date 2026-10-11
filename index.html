@@ -412,6 +412,169 @@
         grid-template-columns: repeat(3, minmax(0, 1fr));
       }
 
+      .coloring-wrap {
+        display: grid;
+        grid-template-columns: 1fr 200px;
+        align-items: center;
+        gap: 22px;
+        background: rgba(255, 255, 255, 0.76);
+        border: 1px solid rgba(97, 84, 137, 0.08);
+        border-radius: 28px;
+        padding: 22px;
+        box-shadow: var(--shadow);
+      }
+
+      .coloring-board {
+        position: relative;
+        min-height: 220px;
+        background: #fffce9;
+        border: 6px solid #f8d769;
+        border-radius: 18px;
+        overflow: hidden;
+      }
+
+      .board-inner {
+        position: absolute;
+        inset: 16px;
+        background: linear-gradient(180deg, #fffdf7 0%, #f7f9ff 100%);
+        border-radius: 12px;
+      }
+
+      .sun {
+        position: absolute;
+        width: 48px;
+        height: 48px;
+        top: 18px;
+        right: 28px;
+        background: #ffd86a;
+        border-radius: 50%;
+      }
+
+      .cloud {
+        position: absolute;
+        width: 90px;
+        height: 28px;
+        top: 32px;
+        left: 24px;
+        background: #dfeeff;
+        border-radius: 20px;
+      }
+
+      .cloud::before,
+      .cloud::after {
+        content: "";
+        position: absolute;
+        background: #dfeeff;
+        border-radius: 50%;
+      }
+
+      .cloud::before {
+        width: 30px;
+        height: 30px;
+        left: 16px;
+        top: -12px;
+      }
+
+      .cloud::after {
+        width: 34px;
+        height: 34px;
+        right: 18px;
+        top: -14px;
+      }
+
+      .house {
+        position: absolute;
+        width: 110px;
+        height: 80px;
+        left: 64px;
+        bottom: 26px;
+        background: #b8e7d6;
+        border-radius: 8px;
+      }
+
+      .house::before {
+        content: "";
+        position: absolute;
+        left: -12px;
+        bottom: 0;
+        width: 0;
+        height: 0;
+        border-left: 67px solid transparent;
+        border-right: 67px solid transparent;
+        border-bottom: 48px solid #ffd0d7;
+      }
+
+      .house::after {
+        content: "";
+        position: absolute;
+        width: 18px;
+        height: 26px;
+        right: 18px;
+        bottom: 0;
+        background: #f7c95e;
+        border-radius: 4px 4px 0 0;
+      }
+
+      .tree {
+        position: absolute;
+        width: 14px;
+        height: 84px;
+        right: 76px;
+        bottom: 28px;
+        background: #a77648;
+        border-radius: 10px;
+      }
+
+      .tree::before {
+        content: "";
+        position: absolute;
+        width: 58px;
+        height: 58px;
+        left: -22px;
+        top: -38px;
+        background: #7ecf88;
+        border-radius: 50%;
+        box-shadow: -18px 10px 0 #8bd695, 18px 8px 0 #7ecf88;
+      }
+
+      .pencil-wrap {
+        display: flex;
+        justify-content: center;
+      }
+
+      .pencil {
+        position: relative;
+        width: 170px;
+        height: 22px;
+        background: linear-gradient(90deg, #f8d95f 0 55%, #f2c637 55% 100%);
+        border-radius: 10px;
+        transform: rotate(-25deg);
+        box-shadow: 0 12px 18px rgba(125, 94, 45, 0.18);
+      }
+
+      .pencil::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 22px;
+        height: 22px;
+        background: #ffb5c5;
+        border-radius: 10px 0 0 10px;
+      }
+
+      .pencil::after {
+        content: "";
+        position: absolute;
+        right: -18px;
+        top: 0;
+        width: 0;
+        height: 0;
+        border-top: 11px solid transparent;
+        border-bottom: 11px solid transparent;
+        border-left: 22px solid #f2c637;
+      }
+
       .milestone-card {
         padding: 24px 20px;
       }
@@ -655,6 +818,28 @@
             <h3>Grow</h3>
             <p>With love, support, and learning, Kicha is becoming more confident each day.</p>
           </article>
+        </div>
+      </section>
+
+      <section class="container coloring-section">
+        <div class="section-head">
+          <p>Coloring time</p>
+          <h2>Little board, big fun</h2>
+        </div>
+
+        <div class="coloring-wrap">
+          <div class="coloring-board" aria-label="Simple coloring board with a small sketch">
+            <div class="board-inner">
+              <span class="sun"></span>
+              <span class="cloud"></span>
+              <span class="house"></span>
+              <span class="tree"></span>
+            </div>
+          </div>
+
+          <div class="pencil-wrap" aria-label="One pencil illustration">
+            <div class="pencil"></div>
+          </div>
         </div>
       </section>
     </main>
