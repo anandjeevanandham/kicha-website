@@ -16,6 +16,7 @@
           <a href="#highlights">Highlights</a>
           <a href="#school">School</a>
           <a href="#journey">Journey</a>
+          <a href="#tic-tac-toe">Tic-tac-toe</a>
           <a href="#paint">Paint</a>
         </div>
       </nav>
@@ -174,6 +175,29 @@
         </div>
       </section>
 
+      <section id="tic-tac-toe" class="container">
+        <div class="section-head">
+          <p>Play time</p>
+          <h2>Tic-tac-toe</h2>
+        </div>
+
+        <div class="game-panel">
+          <p id="gameStatus" class="game-status" aria-live="polite">X's turn</p>
+          <div class="game-board" role="group" aria-label="Tic-tac-toe board">
+            <button class="game-cell" type="button" data-cell="0" aria-label="Row 1, column 1"></button>
+            <button class="game-cell" type="button" data-cell="1" aria-label="Row 1, column 2"></button>
+            <button class="game-cell" type="button" data-cell="2" aria-label="Row 1, column 3"></button>
+            <button class="game-cell" type="button" data-cell="3" aria-label="Row 2, column 1"></button>
+            <button class="game-cell" type="button" data-cell="4" aria-label="Row 2, column 2"></button>
+            <button class="game-cell" type="button" data-cell="5" aria-label="Row 2, column 3"></button>
+            <button class="game-cell" type="button" data-cell="6" aria-label="Row 3, column 1"></button>
+            <button class="game-cell" type="button" data-cell="7" aria-label="Row 3, column 2"></button>
+            <button class="game-cell" type="button" data-cell="8" aria-label="Row 3, column 3"></button>
+          </div>
+          <button id="newGame" class="clear-btn game-reset" type="button">New game</button>
+        </div>
+      </section>
+
       <section id="paint" class="container">
         <div class="section-head">
           <p>Creative board</p>
@@ -211,5 +235,6 @@
     </footer>
 
     <script src="script.js"></script>
+    <script src="game.js"></script>
   </body>
 </html>
